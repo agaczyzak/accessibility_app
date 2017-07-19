@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Tinder.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>824F5D961F1FAB21008BA9A9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>824F5DAA1F1FAB21008BA9A9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>824F5DB51F1FAB21008BA9A9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
