@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,17 +21,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MWF-Rg-OnH" userLabel="Image_profile">
-                                <rect key="frame" x="24" y="100" width="327" height="431"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MWF-Rg-OnH" userLabel="Image_profile">
+                                <rect key="frame" x="20" y="100" width="335" height="451"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="B31-yY-zym" userLabel="catView">
-                                        <rect key="frame" x="0.0" y="0.0" width="327" height="431"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="451"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <bool key="isElement" value="YES"/>
                                         </accessibility>
                                     </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="xA6-3R-qbC">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="451"/>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peter, 26" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIf-RJ-Lt5" userLabel="nameLabel">
-                                        <rect key="frame" x="24" y="381" width="88" height="26.5"/>
+                                        <rect key="frame" x="24" y="401" width="88" height="26.5"/>
                                         <accessibility key="accessibilityConfiguration" label="Peter, 26 years old"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                         <color key="textColor" red="0.95686274510000002" green="0.96470588239999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -43,13 +45,18 @@
                                 <constraints>
                                     <constraint firstItem="MIf-RJ-Lt5" firstAttribute="leading" secondItem="MWF-Rg-OnH" secondAttribute="leading" constant="24" id="2SD-6h-JtD"/>
                                     <constraint firstItem="B31-yY-zym" firstAttribute="top" secondItem="MWF-Rg-OnH" secondAttribute="top" id="9E2-5D-tUx"/>
+                                    <constraint firstItem="xA6-3R-qbC" firstAttribute="leading" secondItem="MWF-Rg-OnH" secondAttribute="leading" id="Brb-3S-s9x"/>
+                                    <constraint firstAttribute="bottom" secondItem="xA6-3R-qbC" secondAttribute="bottom" id="HqW-7Z-wZk"/>
                                     <constraint firstAttribute="bottom" secondItem="B31-yY-zym" secondAttribute="bottom" id="Pf1-i4-lcB"/>
+                                    <constraint firstAttribute="trailing" secondItem="xA6-3R-qbC" secondAttribute="trailing" id="Wgn-U2-i9Z"/>
                                     <constraint firstAttribute="bottom" secondItem="MIf-RJ-Lt5" secondAttribute="bottom" constant="24" id="fHX-GG-8uo"/>
                                     <constraint firstAttribute="trailing" secondItem="B31-yY-zym" secondAttribute="trailing" id="fvb-WX-oD6"/>
+                                    <constraint firstItem="xA6-3R-qbC" firstAttribute="top" secondItem="MWF-Rg-OnH" secondAttribute="top" id="iBX-KP-kel"/>
+                                    <constraint firstAttribute="trailing" secondItem="xA6-3R-qbC" secondAttribute="trailing" id="rLM-sf-Xel"/>
                                     <constraint firstItem="B31-yY-zym" firstAttribute="leading" secondItem="MWF-Rg-OnH" secondAttribute="leading" id="tmQ-nY-lOu"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TfN-hL-sCw">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TfN-hL-sCw" userLabel="BottomBar">
                                 <rect key="frame" x="0.0" y="591" width="375" height="76"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="center" semanticContentAttribute="spatial" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="0sn-43-Ibc">
@@ -107,27 +114,53 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="73"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" image="messages" translatesAutoresizingMaskIntoConstraints="NO" id="Chy-tS-dQT">
-                                        <rect key="frame" x="311" y="0.0" width="40" height="30"/>
+                                        <rect key="frame" x="324" y="24.5" width="27" height="24"/>
                                         <accessibility key="accessibilityConfiguration" label="Messages">
                                             <accessibilityTraits key="traits" button="YES"/>
                                             <bool key="isElement" value="YES"/>
                                         </accessibility>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="Chy-tS-dQT" secondAttribute="height" multiplier="4:3" id="RfW-42-P8A"/>
-                                            <constraint firstAttribute="width" constant="40" id="oFX-qU-zwU"/>
-                                        </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="Flp-PI-mhe">
-                                        <rect key="frame" x="24" y="1" width="35" height="70"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="Flp-PI-mhe">
+                                        <rect key="frame" x="24" y="23" width="23" height="28"/>
                                         <accessibility key="accessibilityConfiguration" label="Profile">
                                             <accessibilityTraits key="traits" button="YES"/>
                                             <bool key="isElement" value="YES"/>
                                         </accessibility>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0T-QE-UhQ" userLabel="customSwitch" customClass="CustomSwitch" customModule="Tinder" customModuleProvider="target">
-                                        <rect key="frame" x="147" y="21" width="80" height="30"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BSK-ec-pYe" userLabel="rightSwitchView">
+                                        <rect key="frame" x="182.5" y="21" width="80" height="30"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="discover_mode" translatesAutoresizingMaskIntoConstraints="NO" id="2Ox-V8-hZV" userLabel="RightSwitchImage">
+                                                <rect key="frame" x="33.5" y="4" width="33" height="22"/>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Two of two" label="Discover mode.">
+                                            <accessibilityTraits key="traits" button="YES"/>
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                         <constraints>
+                                            <constraint firstItem="2Ox-V8-hZV" firstAttribute="centerY" secondItem="BSK-ec-pYe" secondAttribute="centerY" id="1tt-cr-1cU"/>
+                                            <constraint firstItem="2Ox-V8-hZV" firstAttribute="centerX" secondItem="BSK-ec-pYe" secondAttribute="centerX" constant="10" id="GYN-sU-fEo"/>
+                                            <constraint firstAttribute="height" constant="30" id="dyv-jM-gbi"/>
+                                            <constraint firstAttribute="width" constant="80" id="eIQ-xJ-udQ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0T-QE-UhQ" userLabel="leftSwitchView">
+                                        <rect key="frame" x="122.5" y="21" width="80" height="30"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tinder_mode" translatesAutoresizingMaskIntoConstraints="NO" id="R6m-FK-Kcm" userLabel="LeftSwitchImage">
+                                                <rect key="frame" x="32.5" y="6" width="14" height="17"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.2179065107" blue="0.43714800253611114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" hint="One of two" label="Selected. Tinder Mode">
+                                            <accessibilityTraits key="traits" button="YES"/>
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstItem="R6m-FK-Kcm" firstAttribute="centerY" secondItem="e0T-QE-UhQ" secondAttribute="centerY" id="Bmc-ge-q8Q"/>
+                                            <constraint firstItem="R6m-FK-Kcm" firstAttribute="centerX" secondItem="e0T-QE-UhQ" secondAttribute="centerX" id="Zi7-2j-MTQ"/>
                                             <constraint firstAttribute="height" constant="30" id="gxd-g6-b1g"/>
                                             <constraint firstAttribute="width" constant="80" id="yne-TP-BK8"/>
                                         </constraints>
@@ -135,30 +168,36 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.9623456597328186" green="0.95960396528244019" blue="0.97605055570602417" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="BSK-ec-pYe" firstAttribute="centerX" secondItem="zoR-yK-emv" secondAttribute="centerX" constant="35" id="2lh-ze-qO5"/>
                                     <constraint firstAttribute="trailing" secondItem="Chy-tS-dQT" secondAttribute="trailing" constant="24" id="Ad3-RB-3uD"/>
-                                    <constraint firstItem="e0T-QE-UhQ" firstAttribute="centerY" secondItem="zoR-yK-emv" secondAttribute="centerY" id="Lyr-F0-j4p"/>
+                                    <constraint firstItem="Chy-tS-dQT" firstAttribute="centerY" secondItem="zoR-yK-emv" secondAttribute="centerY" id="IOD-Wl-sCw"/>
+                                    <constraint firstItem="e0T-QE-UhQ" firstAttribute="centerY" secondItem="zoR-yK-emv" secondAttribute="centerY" id="OzH-Kh-eyc"/>
+                                    <constraint firstItem="BSK-ec-pYe" firstAttribute="centerY" secondItem="zoR-yK-emv" secondAttribute="centerY" id="Pca-El-OOS"/>
                                     <constraint firstItem="Flp-PI-mhe" firstAttribute="leading" secondItem="zoR-yK-emv" secondAttribute="leading" constant="24" id="TbI-kv-C16"/>
                                     <constraint firstAttribute="height" constant="73" id="Uc7-00-FRc"/>
-                                    <constraint firstItem="Chy-tS-dQT" firstAttribute="top" secondItem="zoR-yK-emv" secondAttribute="top" id="jiC-LL-RPI"/>
-                                    <constraint firstItem="e0T-QE-UhQ" firstAttribute="centerX" secondItem="zoR-yK-emv" secondAttribute="centerX" id="stD-vP-xPO"/>
+                                    <constraint firstItem="Flp-PI-mhe" firstAttribute="centerY" secondItem="zoR-yK-emv" secondAttribute="centerY" id="asQ-hp-1Nv"/>
+                                    <constraint firstItem="e0T-QE-UhQ" firstAttribute="centerX" secondItem="zoR-yK-emv" secondAttribute="centerX" constant="-25" id="stD-vP-xPO"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TfN-hL-sCw" secondAttribute="bottom" id="051-dy-uCQ"/>
-                            <constraint firstItem="TfN-hL-sCw" firstAttribute="top" secondItem="MWF-Rg-OnH" secondAttribute="bottom" constant="60" id="44M-pO-C0O"/>
+                            <constraint firstItem="TfN-hL-sCw" firstAttribute="top" secondItem="MWF-Rg-OnH" secondAttribute="bottom" constant="40" id="44M-pO-C0O"/>
                             <constraint firstAttribute="trailing" secondItem="TfN-hL-sCw" secondAttribute="trailing" id="5cb-TQ-T5K"/>
                             <constraint firstItem="zoR-yK-emv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="Ee6-3D-LQ4"/>
                             <constraint firstItem="TfN-hL-sCw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="I1a-NE-2sx"/>
-                            <constraint firstAttribute="trailing" secondItem="MWF-Rg-OnH" secondAttribute="trailing" constant="24" id="Ref-AQ-gGv"/>
+                            <constraint firstAttribute="trailing" secondItem="MWF-Rg-OnH" secondAttribute="trailing" constant="20" id="Ref-AQ-gGv"/>
                             <constraint firstItem="zoR-yK-emv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="U1k-WL-bmy"/>
                             <constraint firstAttribute="trailing" secondItem="zoR-yK-emv" secondAttribute="trailing" id="i08-ci-rcH"/>
-                            <constraint firstItem="MWF-Rg-OnH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="24" id="sM2-4u-csW"/>
+                            <constraint firstItem="MWF-Rg-OnH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="sM2-4u-csW"/>
                             <constraint firstItem="MWF-Rg-OnH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="yEi-51-Mxg"/>
                         </constraints>
                         <connections>
                             <outlet property="CatView" destination="B31-yY-zym" id="aZr-oL-zJ9"/>
+                            <outlet property="Image_profile" destination="MWF-Rg-OnH" id="7A1-Pg-1AG"/>
+                            <outlet property="leftView" destination="e0T-QE-UhQ" id="ag7-Ts-Llc"/>
+                            <outlet property="rightSwitch" destination="BSK-ec-pYe" id="40M-mK-eHt"/>
                         </connections>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -171,11 +210,14 @@
     <resources>
         <image name="boost" width="54" height="55"/>
         <image name="cat" width="632" height="475"/>
+        <image name="discover_mode" width="33" height="22"/>
         <image name="dislike" width="69" height="67"/>
+        <image name="gradient" width="335" height="451"/>
         <image name="like" width="70" height="65"/>
-        <image name="messages" width="45" height="34"/>
-        <image name="profile" width="35" height="37"/>
+        <image name="messages" width="27" height="24"/>
+        <image name="profile" width="23" height="28"/>
         <image name="super_like" width="53" height="54"/>
+        <image name="tinder_mode" width="14" height="17"/>
         <image name="undo" width="60" height="53"/>
     </resources>
 </document>
